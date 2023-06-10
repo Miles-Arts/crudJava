@@ -34,4 +34,9 @@ public class UserController {
     }
 
 
+    @PutMapping(path = "/{id}")
+    public UserModel updateUserById(@RequestBody UserModel request, Long id) {
+        return this.userService.updateById(request, id);
+    }
+
 }
